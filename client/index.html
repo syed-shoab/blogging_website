@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogging Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--Login/Register -->
+  <div class="auth-container" id="auth-section">
+    <div class="auth-box">
+      <h1>My Blog</h1>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <div class="auth-buttons">
+        <button id="register-btn">Register</button>
+        <button id="login-btn">Login</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- After login-->
+  <div id="app-container" style="display: none;">
+    <!-- Header -->
+    <header class="app-header">
+      <h1>My Blog</h1>
+      <div class="user-info">
+        <span id="logged-in-user"></span>
+        <button id="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-main">
+      <!-- Left Panel -->
+      <div class="left-panel">
+        <div class="create-post">
+          <textarea id="new-post" placeholder="Write a new blog..."></textarea>
+          <button id="create-post-btn" onclick="createPost()">Post</button>
+        </div>
+        <div class="search-box">
+          <input type="text" id="search" placeholder="Search posts..." />
+        </div>
+      </div>
+
+      <!-- Posts Section -->
+      <div id="posts" class="posts-section"></div>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
